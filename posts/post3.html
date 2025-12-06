@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patrones Arquitectónicos Modernos | Blog Técnico</title>
+  <link rel="stylesheet" href="../styles.min.css">
+  <link rel="stylesheet" href="../overrides.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <meta name="description" content="Patrones modernos: Clean Architecture, Hexagonal y CQRS, con ventajas, desventajas, ejemplos y conclusión.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="fade-in">
+  <header class="nav-header">
+    <div class="nav-container">
+      <a class="brand" href="../index.html">José Ariza</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-controls="dropdown-posts">Publicaciones ▾</button>
+            <ul id="dropdown-posts" class="dropdown">
+              <li><a href="post1.html">¿Qué es la Arquitectura de Software?</a></li>
+              <li><a href="post2.html">Estilos Arquitectónicos más utilizados</a></li>
+              <li><a href="post3.html">Patrones Arquitectónicos Modernos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <article>
+      <figure class="media">
+        <img class="post-image" alt="Fondo tecnológico púrpura para patrones arquitectónicos" 
+             src="https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540" 
+             srcset="https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540 960w, https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1280&h=720 1280w, https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920&h=1080 1920w" 
+             sizes="(max-width: 768px) 100vw, 100vw" 
+             loading="lazy" decoding="async" fetchpriority="low">
+      </figure>
+      <h1>Patrones Arquitectónicos Modernos</h1>
+
+      <h2>Definición de patrón arquitectónico</h2>
+      <p>Un patrón arquitectónico es una solución probada para organizar sistemas, estableciendo reglas de dependencia y separación de responsabilidades que facilitan evolución, pruebas y despliegue.</p>
+
+      <h2>Clean Architecture</h2>
+      <h3>Capas</h3>
+      <ul>
+        <li>Entidades (dominio): reglas de negocio centrales.</li>
+        <li>Casos de uso (aplicación): orquestan interacciones del dominio.</li>
+        <li>Interfaces (adaptadores): controladores, presentadores, gateways.</li>
+        <li>Infraestructura: frameworks, drivers, bases de datos.</li>
+      </ul>
+      <h3>Propósito</h3>
+      <p>Invertir dependencias para que el dominio no dependa de detalles externos. Facilita pruebas, cambios de UI o persistencia sin afectar reglas de negocio.</p>
+
+      <h2>Arquitectura Hexagonal (Puertos y Adaptadores)</h2>
+      <p>Define puertos que exponen capacidades del dominio y adaptadores que conectan tecnologías externas como UI, DB o mensajería. El núcleo del dominio permanece aislado.</p>
+
+      <h2>CQRS (Command Query Responsibility Segregation)</h2>
+      <p>Separa operaciones de escritura (commands) de lectura (queries), permitiendo modelos y escalado distintos para cada una. Suele combinarse con Event Sourcing.</p>
+
+      <h2>Ventajas y desventajas</h2>
+      <ul>
+        <li><strong>Clean Architecture</strong>: ventajas en testabilidad y independencia tecnológica; desventaja en sobrecarga inicial y disciplina estricta.</li>
+        <li><strong>Hexagonal</strong>: ventajas en aislamiento del dominio y flexibilidad de integraciones; desventaja en complejidad de adaptadores y mapeos.</li>
+        <li><strong>CQRS</strong>: ventajas en rendimiento y escalado de lecturas/escrituras; desventaja en complejidad operativa y consistencia eventual.</li>
+      </ul>
+
+      <h2>Ejemplos de aplicación en proyectos modernos</h2>
+      <ul>
+        <li>Backend de pagos con <strong>Hexagonal</strong> conectando múltiples proveedores y colas.</li>
+        <li>Plataforma educativa con <strong>Clean Architecture</strong> para separar dominio de UI web y móvil.</li>
+        <li>Analytics en tiempo real con <strong>CQRS</strong> para lecturas masivas y escrituras bufferizadas.</li>
+      </ul>
+
+      <h2>Conclusión general comparando los tres patrones</h2>
+      <p>Clean y Hexagonal priorizan independencia del dominio mediante dependencias dirigidas hacia adentro; CQRS prioriza desempeño separando preocupaciones de lectura y escritura. Elegir depende del problema: si el dominio cambia con frecuencia y requiere testabilidad, Clean/Hexagonal aportan mayor valor; si el reto es rendimiento y escalado de consultas, CQRS es más adecuado.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> José Ariza. Blog Técnico de Arquitectura de Software.</p>
+    </div>
+  </footer>
+
+  <script src="../script.min.js" defer></script>
+</body>
+</html>

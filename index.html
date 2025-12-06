@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Técnico de Arquitectura de Software</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.min.css">
+  <link rel="stylesheet" href="overrides.css">
+  <meta name="description" content="Blog técnico sobre Arquitectura de Software: conceptos, estilos y patrones modernos. Publicaciones claras y prácticas por José Ariza.">
+  <link rel="prefetch" href="posts/post1.html">
+  <link rel="prefetch" href="posts/post2.html">
+  <link rel="prefetch" href="posts/post3.html">
+</head>
+<body class="fade-in">
+  <header class="nav-header">
+    <div class="nav-container">
+      <a class="brand" href="index.html">José Ariza</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-controls="dropdown-posts">Publicaciones ▾</button>
+            <ul id="dropdown-posts" class="dropdown">
+              <li><a href="posts/post1.html">¿Qué es la Arquitectura de Software?</a></li>
+              <li><a href="posts/post2.html">Estilos Arquitectónicos más utilizados</a></li>
+              <li><a href="posts/post3.html">Patrones Arquitectónicos Modernos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" data-parallax>
+      <div class="hero-inner">
+        <h1 class="hero-title" data-parallax-item>Arquitectura de Software</h1>
+        <p class="hero-subtitle" data-parallax-item>Investigación y publicaciones técnicas sobre conceptos, estilos y patrones modernos.</p>
+        <div class="hero-actions" data-parallax-item>
+          <a class="btn primary" href="posts/post1.html">Comenzar</a>
+          <a class="btn ghost" href="posts/post2.html">Explorar estilos</a>
+        </div>
+      </div>
+      <img class="hero-img" alt="" aria-hidden="true" role="presentation"
+           src="https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540" 
+           srcset="https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540 960w, https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1280&h=720 1280w, https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920&h=1080 1920w" 
+           sizes="(max-width: 768px) 100vw, 100vw" 
+           width="1920" height="1080"
+           loading="eager" fetchpriority="high" decoding="async"
+           onerror="this.style.display='none'">
+      <div class="hero-bg"></div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Publicaciones</h2>
+        <div class="cards">
+          <article class="card">
+            <h3><a href="posts/post1.html">¿Qué es la Arquitectura de Software?</a></h3>
+            <p>Definición, objetivos, componentes, importancia y roles del arquitecto.</p>
+            <a class="btn small" href="posts/post1.html">Leer más</a>
+          </article>
+          <article class="card">
+            <h3><a href="posts/post2.html">Estilos Arquitectónicos más utilizados</a></h3>
+            <p>Monolítico, Capas, Cliente-Servidor, MVC y Microservicios con comparación.</p>
+            <a class="btn small" href="posts/post2.html">Leer más</a>
+          </article>
+          <article class="card">
+            <h3><a href="posts/post3.html">Patrones Arquitectónicos Modernos</a></h3>
+            <p>Clean Architecture, Hexagonal y CQRS con ventajas, desventajas y ejemplos.</p>
+            <a class="btn small" href="posts/post3.html">Leer más</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> José Ariza. Blog Técnico de Arquitectura de Software.</p>
+    </div>
+  </footer>
+
+  <script src="script.min.js" defer></script>
+</body>
+</html>

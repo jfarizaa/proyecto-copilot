@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Qué es la Arquitectura de Software? | Blog Técnico</title>
+  <link rel="stylesheet" href="../styles.min.css">
+  <link rel="stylesheet" href="../overrides.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <meta name="description" content="Definición y objetivos de la Arquitectura de Software, componentes, importancia y rol del arquitecto.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="fade-in">
+  <header class="nav-header">
+    <div class="nav-container">
+      <a class="brand" href="../index.html">José Ariza</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-controls="dropdown-posts">Publicaciones ▾</button>
+            <ul id="dropdown-posts" class="dropdown">
+              <li><a href="post1.html">¿Qué es la Arquitectura de Software?</a></li>
+              <li><a href="post2.html">Estilos Arquitectónicos más utilizados</a></li>
+              <li><a href="post3.html">Patrones Arquitectónicos Modernos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <article>
+      <figure class="media">
+        <img class="post-image" alt="Arquitectura abstracta en fondo oscuro" 
+             src="https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540" 
+             srcset="https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540 960w, https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1280&h=720 1280w, https://images.unsplash.com/photo-1642922513392-7306815ea7f2?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920&h=1080 1920w" 
+             sizes="(max-width: 768px) 100vw, 100vw" 
+             loading="lazy" decoding="async" fetchpriority="low">
+      </figure>
+      <h1>¿Qué es la Arquitectura de Software?</h1>
+
+      <h2>Definición de Arquitectura de Software</h2>
+      <p>La arquitectura de software es la estructura organizacional de un sistema, que define sus componentes, las relaciones entre ellos y los principios que guían su diseño y evolución. Sirve como plano estratégico que permite comprender cómo el sistema satisface requisitos funcionales y no funcionales.</p>
+
+      <h2>Objetivo principal de la arquitectura en un sistema</h2>
+      <p>El objetivo es asegurar que el sistema cumpla su propósito de forma sostenible, escalable y mantenible. La arquitectura alinea decisiones técnicas con objetivos de negocio, reduce riesgos y facilita la evolución continua.</p>
+
+      <h2>Componentes básicos de una arquitectura</h2>
+      <ul>
+        <li><strong>Módulos</strong>: unidades lógicas que encapsulan funcionalidad y datos.</li>
+        <li><strong>Interfaces</strong>: contratos que definen cómo interactúan los módulos entre sí.</li>
+        <li><strong>Conectores</strong>: mecanismos de comunicación como llamadas a métodos, eventos, colas o APIs.</li>
+      </ul>
+
+      <h2>Importancia dentro del desarrollo de software</h2>
+      <ul>
+        <li><strong>Escalabilidad</strong>: permite crecer en usuarios, datos y funcionalidades sin degradar el servicio.</li>
+        <li><strong>Mantenibilidad</strong>: facilita comprender, modificar y extender el sistema con menor costo.</li>
+        <li><strong>Rendimiento</strong>: habilita tiempos de respuesta adecuados y uso eficiente de recursos.</li>
+      </ul>
+
+      <h2>Roles y responsabilidades de un Arquitecto de Software</h2>
+      <ul>
+        <li>Definir la arquitectura alineada a objetivos de negocio y restricciones técnicas.</li>
+        <li>Seleccionar tecnologías, patrones y estilos adecuados.</li>
+        <li>Guiar decisiones de diseño y revisar calidad técnica.</li>
+        <li>Anticipar riesgos, asegurar seguridad y observabilidad.</li>
+        <li>Comunicar la visión arquitectónica a equipos y stakeholders.</li>
+      </ul>
+
+      <h2>Ejemplos básicos de arquitecturas en proyectos reales</h2>
+      <ul>
+        <li>Aplicación de inventarios en <strong>capas</strong> con separación de presentación, negocio y datos.</li>
+        <li>Portal institucional <strong>cliente-servidor</strong> con aplicaciones web y API REST.</li>
+        <li>Plataforma de ecommerce basada en <strong>microservicios</strong> para órdenes, pagos y catálogo.</li>
+      </ul>
+
+      <h2>Conclusión o reflexión final</h2>
+      <p>Una buena arquitectura no es un documento estático; es un conjunto de decisiones que se adaptan a la evolución del sistema. Elegir responsablemente componentes, interfaces y conectores mejora la capacidad de respuesta del equipo ante cambios y asegura que el software mantenga calidad a largo plazo.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> José Ariza. Blog Técnico de Arquitectura de Software.</p>
+    </div>
+  </footer>
+
+  <script src="../script.min.js" defer></script>
+</body>
+</html>

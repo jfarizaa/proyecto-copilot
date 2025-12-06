@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estilos Arquitectónicos más utilizados | Blog Técnico</title>
+  <link rel="stylesheet" href="../styles.min.css">
+  <link rel="stylesheet" href="../overrides.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <meta name="description" content="Estilos arquitectónicos: monolítico, N-capas, cliente-servidor, MVC y microservicios, con comparación y conclusión.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body class="fade-in">
+  <header class="nav-header">
+    <div class="nav-container">
+      <a class="brand" href="../index.html">José Ariza</a>
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="../index.html">Inicio</a></li>
+          <li class="has-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-controls="dropdown-posts">Publicaciones ▾</button>
+            <ul id="dropdown-posts" class="dropdown">
+              <li><a href="post1.html">¿Qué es la Arquitectura de Software?</a></li>
+              <li><a href="post2.html">Estilos Arquitectónicos más utilizados</a></li>
+              <li><a href="post3.html">Patrones Arquitectónicos Modernos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <article>
+      <figure class="media">
+        <img class="post-image" alt="Fondo tecnológico con tonos cálidos" 
+             src="https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540" 
+             srcset="https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=960&h=540 960w, https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1280&h=720 1280w, https://images.unsplash.com/photo-1689443111130-6e9c7dfd8f9e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=1920&h=1080 1920w" 
+             sizes="(max-width: 768px) 100vw, 100vw" 
+             loading="lazy" decoding="async" fetchpriority="low">
+      </figure>
+      <h1>Estilos Arquitectónicos más utilizados</h1>
+
+      <h2>Definición de estilo arquitectónico</h2>
+      <p>Un estilo arquitectónico es un conjunto de principios que define la organización y comunicación entre componentes de un sistema. Cada estilo guía decisiones de diseño, trade-offs y calidad global.</p>
+
+      <h2>Estilo Monolítico</h2>
+      <h3>Características</h3>
+      <ul>
+        <li>Una sola base de código desplegable como unidad.</li>
+        <li>Compartición de recursos y memoria interna.</li>
+        <li>Comunicación interna por llamadas directas.</li>
+      </ul>
+      <h3>Ventajas</h3>
+      <ul>
+        <li>Simplicidad de despliegue y desarrollo.</li>
+        <li>Menor latencia interna y depuración directa.</li>
+        <li>Ideal para MVP y equipos pequeños.</li>
+      </ul>
+      <h3>Desventajas</h3>
+      <ul>
+        <li>Escalado limitado y acoplamiento alto.</li>
+        <li>Riesgo de <em>big ball of mud</em>.</li>
+        <li>Despliegues arriesgados al afectar todo el sistema.</li>
+      </ul>
+
+      <h2>Arquitectura en Capas (N-Capas)</h2>
+      <p>Organiza el sistema en capas con responsabilidades claras: presentación, negocio, acceso a datos, infraestructura. Favorece separación de preocupaciones y pruebas.</p>
+
+      <h2>Arquitectura Cliente-Servidor</h2>
+      <p>Divide responsabilidades entre clientes (interfaces de usuario) y servidores (servicios y datos). Usa protocolos estándar como HTTP y mecanismos de autenticación.</p>
+
+      <h2>Arquitectura MVC</h2>
+      <p>Modelo-Vista-Controlador separa datos, interfaz y lógica de interacción. Común en aplicaciones web y móviles por su claridad y testabilidad.</p>
+
+      <h2>Arquitectura de Microservicios</h2>
+      <p>Conjunto de servicios pequeños y autónomos que colaboran vía APIs. Permite despliegue independiente, escalado específico y heterogeneidad tecnológica.</p>
+
+      <h2>Comparación entre los estilos</h2>
+      <table class="table" aria-label="Tabla comparativa de estilos">
+        <thead>
+          <tr>
+            <th>Estilo</th>
+            <th>Escalabilidad</th>
+            <th>Mantenibilidad</th>
+            <th>Complejidad Operativa</th>
+            <th>Casos ideales</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monolítico</td>
+            <td>Media</td>
+            <td>Baja a media</td>
+            <td>Baja</td>
+            <td>MVP, equipos pequeños, dominios simples</td>
+          </tr>
+          <tr>
+            <td>N-Capas</td>
+            <td>Media</td>
+            <td>Alta</td>
+            <td>Media</td>
+            <td>Sistemas empresariales con reglas claras</td>
+          </tr>
+          <tr>
+            <td>Cliente-Servidor</td>
+            <td>Media</td>
+            <td>Media</td>
+            <td>Media</td>
+            <td>Aplicaciones web, móviles y APIs</td>
+          </tr>
+          <tr>
+            <td>MVC</td>
+            <td>Media</td>
+            <td>Alta</td>
+            <td>Media</td>
+            <td>Interfaces ricas y lógica de UI compleja</td>
+          </tr>
+          <tr>
+            <td>Microservicios</td>
+            <td>Alta</td>
+            <td>Alta</td>
+            <td>Alta</td>
+            <td>Dominios grandes, escalado independiente, equipos múltiples</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Conclusión: ¿Cuándo conviene cada estilo?</h2>
+      <p>El estilo depende del contexto. Monolítico favorece rapidez inicial y simplicidad. N-Capas y MVC son adecuados para claridad de responsabilidades. Cliente-Servidor es natural para aplicaciones distribuidas. Microservicios convienen cuando hay límites de dominio claros, equipos autónomos y necesidad de escalado independiente; de lo contrario, agregan complejidad innecesaria.</p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> José Ariza. Blog Técnico de Arquitectura de Software.</p>
+    </div>
+  </footer>
+
+  <script src="../script.min.js" defer></script>
+</body>
+</html>
